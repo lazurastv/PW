@@ -1,0 +1,12 @@
+Zmiana tnp na tmp
+Zmiana przecinka na średnik w loopie for
+zamiana v[j] na v[i]
+
+błędem jest zapętlanie się odejmowania j w przypadku, gdy wszystkie cyfry
+na drodze sortowania liczby są od niej większe. j wtedy schodzi poniżej
+wartości 0, i zaczyna próbować porównywać wektory nieistniejące
+v[-1], v[-2] itd.
+
+Dodanie polecenia if (j < 0)
+			break
+pozwala funkcji złamać pętle w momencie gdy j osiągnie wartość mniejszą od zera.
